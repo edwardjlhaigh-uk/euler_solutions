@@ -16,14 +16,6 @@
         text-align: center;
     }
     
-    div.subtitle {
-        text-decoration-line: underline;
-    }
-    
-    div.problemtext {
-        margin-left: 20px;
-    }
-    
 </style>
 
 <head>
@@ -58,64 +50,6 @@
         This site contains my answers and code to the Project Euler challanges found at <a href="https://projecteuler.net">https://projecteuler.net</a>. I will also play about with various HTML5, CSS3 and Javascript elements meaning this website may lack consistency or perhaps even reason.
     </p>
 <p>
-        
-    <div class="subtitle">
-        Problem 1 <br> <br>
-    </div>
     
-    <div class="problemtext">
-        If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6            and 9. The sum of these multiples is 23.
-        <br> <br>
-        Find the sum of all the multiples of 3 or 5 below 1000.
-    </div>
-    
-    <div class="subtitle">
-        <br> <br> Solution 1  
-    </div>
-        
-</p>
-
-<script>
-    
-    var threeArray = [];
-    var fiveArray = [];
-    
-    for (i = 1; i < 1000; i++) {
-        if(i % 3 == 0) {
-            threeArray.push(i);
-        };
-    
-    if(i % 5 == 0 && i % 3 != 0) {
-        fiveArray.push(i);
-        };
-    };
-    
-    // console.log is to check the arrays
-    
-    console.log(threeArray);
-    console.log(fiveArray);
-    
-    // this function will be used to add the array value
-    
-    function sum (a, b) {
-        return a + b;
-    };
-    
-    // reduce allows us to add each element of the array together, via the sum function
-    
-    var threeTotal = threeArray.reduce(sum, 0);
-    
-    var fiveTotal = fiveArray.reduce(sum, 0);
-    
-    // this is the total sum of the two arrays
-    
-    var total = threeTotal + fiveTotal;
-    console.log(total);
-    
-    // 233168
-    
-</script>
-
-</div>        
 </body>    
 </html>
